@@ -3469,6 +3469,7 @@ function extractTar(file, dest, flags = 'xz') {
         dest = yield _createExtractFolder(dest);
         // Determine whether GNU tar
         let versionOutput = '';
+        console.log("file="+file);
         console.log("dest="+ dest);
         yield exec_1.exec('tar --version', [], {
             ignoreReturnCode: true,
