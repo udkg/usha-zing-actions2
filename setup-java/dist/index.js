@@ -4832,10 +4832,12 @@ function getDownloadInfo(refs, version, javaPackage, baseUrl) {
     let pkgRegexp = new RegExp('');
     let pkgTypeLength = 0;
     if (javaPackage === 'jdk') {
+        console.log("javaPackage3="+javaPackage);
         pkgRegexp = /jdk.*-/gi;
         pkgTypeLength = 'jdk'.length;
     }
     else if (javaPackage == 'jre') {
+        console.log("javaPackage2="+javaPackage);
         pkgRegexp = /jre.*-/gi;
         pkgTypeLength = 'jre'.length;
     }
