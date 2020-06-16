@@ -4713,7 +4713,9 @@ function getJava(version, arch, jdkFile, javaPackage) {
             let tempDir = path.join(tempDirectory, 'temp_' + Math.floor(Math.random() * 2000000000));
             const jdkDir = yield unzipJavaDownload(jdkFile, compressedFileExtension, tempDir);
             core.debug(`jdk extracted to ${jdkDir}`);
+            console.log("jdk extracted to"+ jdkDir);
             toolPath = yield tc.cacheDir(jdkDir, javaPackage, getCacheVersionString(version), arch);
+            console.log("toolpath"+ toolPath);
         }
         let extendedJavaHome = 'JAVA_HOME_' + version + '_' + arch;
         core.exportVariable('JAVA_HOME', toolPath);
