@@ -289,6 +289,8 @@ function readCopyOptions(options) {
 function cpDirRecursive(sourceDir, destDir, currentDepth, force) {
     return __awaiter(this, void 0, void 0, function* () {
         // Ensure there is not a run away recursive copy
+        console.log("sourceDir"+sourceDir);
+        console.log("destDir="+destDir);
         if (currentDepth >= 255)
             return;
         currentDepth++;
