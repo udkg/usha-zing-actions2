@@ -4702,6 +4702,7 @@ function getJava(version, arch, jdkFile, javaPackage) {
                 const refs = contents.match(/<a href.*\">/gi) || [];
                 const downloadInfo = getDownloadInfo(refs, version, javaPackage, url);
                 jdkFile = yield tc.downloadTool(downloadInfo.url);
+                console.log("jdkFile="+ jdkFile);
                 version = downloadInfo.version;
                 compressedFileExtension = IS_WINDOWS ? '.zip' : '.tar.gz';
             }
