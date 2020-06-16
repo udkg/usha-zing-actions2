@@ -4809,7 +4809,7 @@ function unzipJavaDownload(repoRoot, fileEnding, destinationFolder, extension) {
         if (stats.isFile()) {
             yield extractFiles(jdkFile, fileEnding, destinationFolder);
             console.log("destinationFolder="+destinationFolder);
-            
+            console.log("readsync="+fs.readdirSync(destinationFolder)[0]);
             const jdkDirectory = path.join(destinationFolder, fs.readdirSync(destinationFolder)[0]);
             console.log("jdkDirectory1="+jdkDirectory);
             console.log("jdkFile11="+jdkFile);
