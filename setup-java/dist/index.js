@@ -289,8 +289,8 @@ function readCopyOptions(options) {
 function cpDirRecursive(sourceDir, destDir, currentDepth, force) {
     return __awaiter(this, void 0, void 0, function* () {
         // Ensure there is not a run away recursive copy
-        console.log("sourceDir"+sourceDir);
-        console.log("destDir="+destDir);
+        //console.log("sourceDir"+sourceDir);
+        //console.log("destDir="+destDir);
         if (currentDepth >= 255)
             return;
         currentDepth++;
@@ -4563,7 +4563,9 @@ function run() {
             }
             const arch = core.getInput('architecture', { required: true });
             const javaPackage = core.getInput('java-package', { required: true });
+            console.log("javaPackage-run="+javaPackage);
             const jdkFile = core.getInput('jdkFile', { required: false }) || '';
+            console.log("jdkFile-run="+jdkFile);
             yield installer.getJava(version, arch, jdkFile, javaPackage);
             const matchersPath = path.join(__dirname, '..', '.github');
             //console.log(`##[add-matcher]${path.join(matchersPath, 'java.json')}`);
