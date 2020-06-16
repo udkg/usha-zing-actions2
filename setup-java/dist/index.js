@@ -4709,7 +4709,7 @@ function getJava(version, arch, jdkFile, javaPackage) {
                 const downloadInfo = getDownloadInfo(refs, version, javaPackage, url);
                 console.log("downloadInfourl="+downloadInfo.url);
                 //console.log("downloadInfo="+downloadInfo.refs);
-                //console.log("downloadInfo="+downloadInfo.javaPackage);
+                console.log("downloadInfo="+downloadInfo.javaPackage);
                 jdkFile = yield tc.downloadTool(downloadInfo.url);
                 console.log("jdkFile1="+ jdkFile);
                 version = downloadInfo.version;
