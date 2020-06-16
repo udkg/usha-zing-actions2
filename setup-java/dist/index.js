@@ -4564,7 +4564,7 @@ function run() {
             const jdkFile = core.getInput('jdkFile', { required: false }) || '';
             yield installer.getJava(version, arch, jdkFile, javaPackage);
             const matchersPath = path.join(__dirname, '..', '.github');
-            console.log(`##[add-matcher]${path.join(matchersPath, 'java.json')}`);
+            //console.log(`##[add-matcher]${path.join(matchersPath, 'java.json')}`);
             const id = core.getInput('server-id', { required: false }) || undefined;
             const username = core.getInput('server-username', { required: false }) || undefined;
             const password = core.getInput('server-password', { required: false }) || undefined;
