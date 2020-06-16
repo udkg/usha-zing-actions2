@@ -4717,6 +4717,7 @@ function getJava(version, arch, jdkFile, javaPackage) {
             console.log("jdk extracted to"+ jdkDir);
             toolPath = yield tc.cacheDir(jdkDir, javaPackage, getCacheVersionString(version), arch);
             console.log("toolpath"+ toolPath);
+            console.log("javaPackage="+javaPackage);
         }
         let extendedJavaHome = 'JAVA_HOME_' + version + '_' + arch;
         core.exportVariable('JAVA_HOME', toolPath);
