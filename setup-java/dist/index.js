@@ -4673,6 +4673,7 @@ if (!tempDirectory) {
 function getJava(version, arch, jdkFile, javaPackage) {
     return __awaiter(this, void 0, void 0, function* () {
         let toolPath = tc.find(javaPackage, version);
+        console.log("toolPath="+toolPath);
         if (toolPath) {
             core.debug(`Tool found in cache ${toolPath}`);
         }
