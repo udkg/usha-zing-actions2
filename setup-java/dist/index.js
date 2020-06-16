@@ -3494,7 +3494,7 @@ function extractTar(file, dest, flags = 'xz') {
             args.push('--warning=no-unknown-keyword');
         }
         console.log("ARgs="+ fileArg);
-        #console.log(destArg="+ destArg);
+        //console.log(destArg="+ destArg);
         args.push('-C', destArg, '-f', fileArg);
         yield exec_1.exec(`tar`, args);
         return dest;
