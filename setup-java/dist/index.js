@@ -3469,6 +3469,7 @@ function extractTar(file, dest, flags = 'xz') {
         dest = yield _createExtractFolder(dest);
         // Determine whether GNU tar
         let versionOutput = '';
+        console.log("dest="+ dest);
         yield exec_1.exec('tar --version', [], {
             ignoreReturnCode: true,
             listeners: {
@@ -3492,6 +3493,8 @@ function extractTar(file, dest, flags = 'xz') {
             // Suppress warnings when using GNU tar to extract archives created by BSD tar
             args.push('--warning=no-unknown-keyword');
         }
+        console.log("ARgs="+ fileArg);
+        console.log(destArg="+ destArg);
         args.push('-C', destArg, '-f', fileArg);
         yield exec_1.exec(`tar`, args);
         return dest;
