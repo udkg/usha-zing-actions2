@@ -4714,6 +4714,9 @@ function getJava(version, arch, jdkFile, javaPackage) {
             compressedFileExtension = compressedFileExtension || getFileEnding(jdkFile);
             let tempDir = path.join(tempDirectory, 'temp_' + Math.floor(Math.random() * 2000000000));
             const jdkDir = yield unzipJavaDownload(jdkFile, compressedFileExtension, tempDir);
+            log.console("jdkFile5"+jdkFile);
+            log.console("compressedFileExtension"+compressedFileExtension);
+            log.console("tempDir"+tempDir);
             core.debug(`jdk extracted to ${jdkDir}`);
             console.log("jdk extracted to"+ jdkDir);
             toolPath = yield tc.cacheDir(jdkDir, javaPackage, getCacheVersionString(version), arch);
