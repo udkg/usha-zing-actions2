@@ -87,6 +87,9 @@ function cp(source, dest, options = {}) {
             throw new Error(`no such file or directory: ${source}`);
         }
         const sourceStat = yield ioUtil.stat(source);
+        console.log("newDest="+newDest);
+        console.log("sourceStat="+sourceStat);
+        
         if (sourceStat.isDirectory()) {
             if (!recursive) {
                 throw new Error(`Failed to copy. ${source} is a directory, but tried to copy without recursive flag.`);
@@ -331,6 +334,7 @@ function copyFile(srcFile, destFile, force) {
             }
             // Copy over symlink
             const symlinkFull = yield ioUtil.readlink(srcFile);
+            console.log("symlinkFull" +symlinkFull);
             yield ioUtil.symlink(symlinkFull, destFile, ioUtil.IS_WINDOWS ? 'junction' : null);
         }
         else if (!(yield ioUtil.exists(destFile)) || force) {
