@@ -3568,7 +3568,9 @@ function cacheDir(sourceDir, tool, version, arch) {
         version = semver.clean(version) || version;
         arch = arch || os.arch();
         core.debug(`Caching tool ${tool} ${version} ${arch}`);
+        console.debug(`Caching tool ${tool} ${version} ${arch}`);
         core.debug(`source dir: ${sourceDir}`);
+        console.log("sourceDir"+ sourceDir);
         if (!fs.statSync(sourceDir).isDirectory()) {
             throw new Error('sourceDir is not a directory');
         }
@@ -3576,6 +3578,7 @@ function cacheDir(sourceDir, tool, version, arch) {
         const destPath = yield _createToolPath(tool, version, arch);
         // copy each child item. do not move. move can fail on Windows
         // due to anti-virus software having an open handle on a file.
+        console.log("destPATh"+destPath);
         for (const itemName of fs.readdirSync(sourceDir)) {
             const s = path.join(sourceDir, itemName);
             yield io.cp(s, destPath, { recursive: true });
