@@ -4713,7 +4713,7 @@ function getJava(version, arch, jdkFile, javaPackage) {
                 }
                 const contents = yield response.readBody();
                 const refs = contents.match(/<a href.*\">/gi) || [];
-                console.log("refs"=+refs);
+                //console.log("refs"=+refs);
                 console.log("version"=+version);
                 console.log("javaPackage"=+javaPackage);
                 console.log("url"=+url);
