@@ -4900,7 +4900,7 @@ function getDownloadInfo(refs, version, javaPackage, baseUrl) {
         const entryUrl = entry[1];
         console.log("entryVersion="+entryVersion);
         console.log("entryUrl="+entryUrl);
-        console.log("curVersion1"+curVersion);
+        console.log("curVersion1="+curVersion);
         if (semver.gt(entryVersion, curVersion)) {
         //if (semver.gt(curVersion, entryVersion)) {
             console.log("if block");
@@ -4909,6 +4909,7 @@ function getDownloadInfo(refs, version, javaPackage, baseUrl) {
             console.log("curVersion="+curVersion);
             console.log("curUrl="+curUrl);
             curVersion = entryVersion;
+            console.log("curVersion after reset="+curVersion);
         }
     }
     if (curUrl == '') {
