@@ -1259,6 +1259,7 @@ module.exports = require("https");
 /***/ (function(module, exports) {
 
 exports = module.exports = SemVer
+exports = module.exports = semver-compare
 
 var debug
 /* istanbul ignore next */
