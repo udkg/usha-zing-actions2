@@ -4913,6 +4913,7 @@ function getDownloadInfo(refs, version, javaPackage, baseUrl) {
     if (curUrl == '') {
         throw new Error(`No valid download found for version ${version} and package ${javaPackage}. Check ${baseUrl} for a list of valid versions or download your own jdk file and add the jdkFile argument`);
     }
+    console.log("url final"+curUrl);
     return { version: curVersion, url: curUrl };
 }
 function normalizeVersion(version) {
