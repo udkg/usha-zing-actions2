@@ -4898,8 +4898,10 @@ function getDownloadInfo(refs, version, javaPackage, baseUrl) {
     for (const entry of versionMap.entries()) {
         const entryVersion = entry[0];
         const entryUrl = entry[1];
+        console.log("entryUrl="+entryUrl);
         if (semver.gt(entryVersion, curVersion)) {
             curUrl = entryUrl;
+            console.log("entryUrl2="+curlUrl);
             curVersion = entryVersion;
         }
     }
