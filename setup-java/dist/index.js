@@ -4697,7 +4697,7 @@ function getJava(version, arch, jdkFile, javaPackage) {
                     allowRetries: true,
                     maxRetries: 3
                 });
-                const url = 'https://cdn.azul.com/zing/releases/old3/';
+                const url = 'https://cdn.azul.com/zing/releases/tgz/';
                 const response = yield http.get(url);
                 const statusCode = response.message.statusCode || 0;
                 if (statusCode < 200 || statusCode > 299) {
