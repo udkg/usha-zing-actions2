@@ -4902,6 +4902,7 @@ function getDownloadInfo(refs, version, javaPackage, baseUrl) {
         console.log("entryUrl="+entryUrl);
         
         if (semver.gt(entryVersion, curVersion)) {
+            console.log("if block");
             curUrl = entryUrl;
             console.log("entryVersion="+entryVersion);
             console.log("curVersion="+curVersion);
