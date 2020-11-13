@@ -8,6 +8,7 @@ import * as tc from '@actions/tool-cache';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as semver from 'semver';
+import * as semvercmp from 'semver-compare';
 
 const IS_WINDOWS = process.platform === 'win32';
 
