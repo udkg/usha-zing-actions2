@@ -1,5 +1,3 @@
-
-```
 module.exports =
 /******/ (function(modules, runtime) { // webpackBootstrap
 /******/ 	"use strict";
@@ -1254,6 +1252,7 @@ exports.debug = debug; // for test
 /***/ (function(module) {
 
 module.exports = require("https");
+//module.exports = require('semver-compare');
 
 /***/ }),
 
@@ -1261,7 +1260,7 @@ module.exports = require("https");
 /***/ (function(module, exports) {
 
 exports = module.exports = SemVer
-
+exports = module.exports = SemVer-compare
 
 var debug
 /* istanbul ignore next */
@@ -4905,8 +4904,7 @@ function getDownloadInfo(refs, version, javaPackage, baseUrl) {
         console.log("entryUrl="+entryUrl);
         console.log("curVersion1="+curVersion);
         //if (semver.gt(entryVersion, curVersion)) {
-        //Usha var cmp = require('semver-compare');
-        var cmp = __nested_webpack_require_2519__(794);
+        var cmp = require('semver-compare');
         if (cmp(entryVersion, curVersion)) {
             console.log("if block");
             curUrl = entryUrl;
@@ -5063,4 +5061,3 @@ exports.exec = exec;
 /***/ })
 
 /******/ });
-```
