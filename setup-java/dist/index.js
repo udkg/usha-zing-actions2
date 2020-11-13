@@ -4903,7 +4903,8 @@ function getDownloadInfo(refs, version, javaPackage, baseUrl) {
         console.log("entryUrl="+entryUrl);
         console.log("curVersion1="+curVersion);
         //if (semver.gt(entryVersion, curVersion)) {
-        var cmp = require('semver-compare');
+        //Usha var cmp = require('semver-compare');
+        var cmp = __nested_webpack_require_2519__(794);
         if (cmp(entryVersion, curVersion)) {
             console.log("if block");
             curUrl = entryUrl;
