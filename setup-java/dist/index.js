@@ -2894,6 +2894,7 @@ const os = __importStar(__webpack_require__(87));
 const path = __importStar(__webpack_require__(622));
 const core = __importStar(__webpack_require__(470));
 const io = __importStar(__webpack_require__(1));
+const semverCmp = __importStar(__webpack_require__(88));
 exports.M2_DIR = '.m2';
 exports.SETTINGS_FILE = 'settings.xml';
 exports.DEFAULT_ID = 'github';
