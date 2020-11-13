@@ -1252,7 +1252,6 @@ exports.debug = debug; // for test
 /***/ (function(module) {
 
 module.exports = require("https");
-module.exports = require('semver-compare');
 
 /***/ }),
 
