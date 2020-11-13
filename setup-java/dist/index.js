@@ -1260,6 +1260,7 @@ module.exports = require('semver-compare');
 /***/ (function(module, exports) {
 
 exports = module.exports = SemVer
+exports = module.exports = SemVer-compare
 
 var debug
 /* istanbul ignore next */
